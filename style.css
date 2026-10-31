@@ -2234,3 +2234,19 @@ a.category-card {
 .content-section .category-card h3 {
     margin-top: 10px;
 }
+/* SUBMIT ACHIEVEMENT BUTTON */
+.submit-btn {
+    background-color: #fefeff;
+    color: #102a56 !important;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #102a56;
+    color: white !important;
+    transform: translateY(-2px);
+}

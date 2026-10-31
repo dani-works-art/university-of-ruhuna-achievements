@@ -2130,3 +2130,107 @@ a.category-card {
         padding: 40px 5%;
     }
 }
+
+/* =========================================
+   INTER-FACULTY SPORTS PAGE
+========================================= */
+
+/* Year selection section */
+#achievements {
+    text-align: center;
+}
+
+#achievements > p {
+    max-width: 750px;
+    margin: 15px auto 30px;
+    line-height: 1.7;
+}
+
+/* Year selection cards */
+#achievements .category-card {
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#achievements .category-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(16, 42, 86, 0.12);
+}
+
+#achievements .category-card span {
+    display: inline-block;
+    margin-top: 12px;
+    color: #d4a017;
+    font-weight: 700;
+}
+
+/* Individual achievement year sections */
+.content-section[id^="year-"] {
+    scroll-margin-top: 90px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+/* Year section descriptions */
+.content-section[id^="year-"] > p {
+    max-width: 800px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Achievement cards */
+.content-section[id^="year-"] .category-card {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section[id^="year-"] .category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(16, 42, 86, 0.12);
+}
+
+/* Back to years buttons */
+.content-section[id^="year-"] .btn {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+
+    #achievements .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-section[id^="year-"] {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #achievements .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* CULTURAL EVENT PHOTO GALLERY */
+
+.content-section .category-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.content-section .category-card {
+    overflow: hidden;
+}
+
+.content-section .category-card h3 {
+    margin-top: 10px;
+}

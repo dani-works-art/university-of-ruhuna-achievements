@@ -1,0 +1,2132 @@
+
+/* ------------------------------
+   GENERAL STYLES
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202b3c;
+    background-color: #f7f9fc;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ------------------------------
+   NAVIGATION BAR
+------------------------------ */
+
+header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.navbar {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 18px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #142b4a;
+    color: #b14444;
+}
+
+
+.logo {
+    color: #102a56;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #9b8359;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #344054;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d99a25;
+}
+
+
+/* ------------------------------
+   HERO SECTION
+------------------------------ */
+
+.hero {
+    min-height: 560px;
+    padding: 90px 24px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(8, 28, 63, 0.97),
+            rgba(16, 55, 100, 0.88)
+        );
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+}
+
+.subtitle {
+    color: #e8ae45;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #f2b84b;
+}
+
+.hero-description {
+    max-width: 590px;
+    font-size: 17px;
+    color: #e0e8f4;
+    margin-bottom: 32px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+
+    background-color: #e8ae45;
+    color: #102a56;
+
+    font-weight: 700;
+    border-radius: 6px;
+
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+
+/* ------------------------------
+   CATEGORIES SECTION
+------------------------------ */
+
+.categories {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 24px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2,
+.about h2 {
+    color: #102a56;
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #667085;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: #ffffff;
+    padding: 30px;
+
+    border-radius: 12px;
+    border: 1px solid #e7ecf3;
+
+    color: #202b3c;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        border-color 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(16, 42, 86, 0.10);
+    border-color: #e8ae45;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff5df;
+    border-radius: 12px;
+
+    font-size: 30px;
+    margin-bottom: 22px;
+}
+
+.category-card h3 {
+    color: #102a56;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.category-card p {
+    color: #667085;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.card-link {
+    color: #bd8217;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: auto;
+}
+
+
+/* ------------------------------
+   ABOUT SECTION
+------------------------------ */
+
+.about {
+    background-color: #edf2f9;
+    padding: 85px 24px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content > p:not(.subtitle) {
+    color: #596579;
+    margin-bottom: 28px;
+}
+
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+    background-color: #0b1e3c;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h3 {
+    color: #f2b84b;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #d3dcec;
+}
+
+.copyright {
+    border-top: 1px solid #33435c;
+    margin-top: 25px;
+    padding-top: 20px;
+}
+
+
+/* ------------------------------
+   TABLETS AND MOBILE PHONES
+------------------------------ */
+
+@media (max-width: 900px) {
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px 18px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 470px;
+        padding: 65px 22px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .categories {
+        padding: 65px 18px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        padding: 25px;
+    }
+
+    .about {
+        padding: 65px 22px;
+    }
+}
+/* ==============================
+   VOLLEYBALL PAGE
+================================ */
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.volleyball-hero8px 6%;
+    background-color: #142b4a;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span,
+.volleyball-footer span {
+    color: #e5ad32;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e5ad32;
+}
+
+/* Large Volleyball Banner */
+.volleyball-hero {
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(rgba(10, 28, 53, 0.65),
+                        rgba(10, 28, 53, 0.65)),
+        url("images/volleyball-banner.jpg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.volleyball-hero-content h1 {
+    font-size: clamp(48px, 7vw, 76px);
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+.volleyball-hero-content p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.volleyball-subtitle {
+    color: #f2bd45;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* Achievements Section */
+.volleyball-achievements {
+    padding: 55px 7%;
+    background-color: #f5f7fb;
+    text-align: center;
+    min-height: 400px;
+}
+
+.volleyball-achievements h2 {
+    color: #142b4a;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.volleyball-intro {
+    color: #626b79;
+    max-width: 650px;
+    margin: 0 auto 35px;
+    line-height: 1.7;
+}
+
+/* Card Layout */
+.volleyball-card-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 350px)
+    );
+    justify-content: center;
+    gap: 28px;
+}
+
+/* Rounded Achievement Card */
+.volleyball-card {
+    background-color: white;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(20, 43, 74, 0.12);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.volleyball-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 32px rgba(20, 43, 74, 0.18);
+}
+
+/* Card Image */
+.volleyball-card-image {
+    height: 200px;
+    overflow: hidden;
+    background-color: #dce4ed;
+}
+
+.volleyball-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card Text */
+.volleyball-card-content {
+    padding: 25px;
+}
+
+.volleyball-tag {
+    display: inline-block;
+    background-color: #fff2d1;
+    color: #8b620c;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.volleyball-card-content h3 {
+    color: #142b4a;
+    font-size: 22px;
+    margin: 16px 0 12px;
+    line-height: 1.4;
+}
+
+.volleyball-card-content p {
+    color: #5c6573;
+    line-height: 1.8;
+}
+
+.achievement-note {
+    border-top: 1px solid #e5e9ef;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+/* Footer */
+.volleyball-footer {
+    background-color: #142b4a;
+    color: white;
+    padding: 25px 6%;
+    text-align: center;
+}
+
+.volleyball-footer p {
+    margin: 8px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .volleyball-hero {
+        min-height: 280px;
+    }
+
+    .volleyball-achievements {
+        padding: 40px 5%;
+    }
+
+    .volleyball-achievements h2 {
+        font-size: 29px;
+    }
+}
+/* Clickable sports cards */
+a.category-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.volleyball-card-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #b78312;
+    font-weight: bold;
+}
+
+/* =========================================
+   SWIMMING PAGE
+   ========================================= */
+
+/* Swimming hero banner */
+.swimming-hero {
+    min-height: 320px;
+    padding: 70px 6%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #ffffff;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 43, 74, 0.55),
+            rgba(20, 43, 74, 0.75)
+        ),
+        url("images/swimming-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.swimming-hero h1 {
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 0 0 15px;
+    line-height: 1.2;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.swimming-hero p {
+    max-width: 750px;
+    margin: 0 auto;
+
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* Achievement section */
+.swimming-achievements {
+    padding: 55px 6%;
+    background-color: #f5f7fb;
+}
+
+.swimming-achievements h2 {
+    margin: 0 0 15px;
+    color: #142b4a;
+    text-align: center;
+    font-size: 32px;
+}
+
+.swimming-achievements > p {
+    max-width: 750px;
+    margin: 0 auto 35px;
+
+    color: #5c6573;
+    text-align: center;
+    line-height: 1.8;
+}
+
+
+/* Achievement card layout */
+.swimming-card-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 350px)
+    );
+
+    justify-content: center;
+    align-items: stretch;
+    gap: 28px;
+}
+
+
+/* Individual achievement card */
+.swimming-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+    border: 1px solid #e7ecf3;
+    border-radius: 18px;
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(20, 43, 74, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.swimming-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 14px 32px rgba(20, 43, 74, 0.18);
+}
+
+
+/* Card image */
+.swimming-card-image {
+    width: 100%;
+    height: 200px;
+
+    overflow: hidden;
+    background-color: #dce4ed;
+}
+
+.swimming-card-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Card text content */
+.swimming-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.swimming-tag {
+    display: inline-block;
+    align-self: flex-start;
+
+    padding: 7px 12px;
+
+    background-color: #e9eff8;
+    color: #142b4a;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.swimming-card-content h3 {
+    margin: 16px 0 12px;
+
+    color: #142b4a;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.swimming-card-content p {
+    margin: 0 0 14px;
+
+    color: #5c6573;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* Achievement highlight */
+.swimming-award {
+    margin-top: auto;
+    padding-top: 14px;
+
+    color: #9a741b;
+    font-weight: bold;
+    line-height: 1.6;
+
+    border-top: 1px solid #e7ecf3;
+}
+
+
+/* Swimming page footer */
+.swimming-footer {
+    padding: 22px 6%;
+
+    background-color: #142b4a;
+    color: #ffffff;
+
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* Responsive layout for mobile devices */
+@media (max-width: 650px) {
+    .swimming-hero {
+        min-height: 260px;
+        padding: 50px 5%;
+    }
+
+    .swimming-hero p {
+        font-size: 16px;
+    }
+
+    .swimming-achievements {
+        padding: 40px 5%;
+    }
+
+    .swimming-achievements h2 {
+        font-size: 27px;
+    }
+
+    .swimming-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .swimming-card-content {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================
+   ROAD RACE PAGE
+   ========================================= */
+
+/* Road Race Banner */
+.roadrace-hero {
+    min-height: 320px;
+    padding: 70px 6%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #ffffff;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 43, 74, 0.55),
+            rgba(20, 43, 74, 0.75)
+        ),
+        url("images/roadrace-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.roadrace-hero h1 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.roadrace-hero p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   ACHIEVEMENTS SECTION
+   ========================================= */
+
+.roadrace-achievements {
+    padding: 55px 6%;
+    background-color: #f5f7fb;
+}
+
+.roadrace-achievements h2 {
+    margin: 0 0 15px;
+    color: #142b4a;
+    text-align: center;
+    font-size: 32px;
+}
+
+.roadrace-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    color: #5c6573;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* =========================================
+   ACHIEVEMENT CARD GRID
+   ========================================= */
+
+.roadrace-card-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 350px)
+    );
+
+    justify-content: center;
+    align-items: stretch;
+    gap: 28px;
+}
+
+/* Individual Achievement Card */
+.roadrace-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+    border: 1px solid #e7ecf3;
+    border-radius: 18px;
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(20, 43, 74, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.roadrace-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 32px rgba(20, 43, 74, 0.18);
+}
+
+/* Achievement Card Image */
+.roadrace-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #dce4ed;
+}
+
+.roadrace-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Achievement Card Content */
+.roadrace-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* Achievement Tag */
+.roadrace-tag {
+    display: inline-block;
+    align-self: flex-start;
+
+    padding: 7px 12px;
+
+    background-color: #e9eff8;
+    color: #142b4a;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Achievement Heading */
+.roadrace-card-content h3 {
+    margin: 16px 0 12px;
+
+    color: #142b4a;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+/* Achievement Description */
+.roadrace-card-content p {
+    margin: 0 0 14px;
+
+    color: #5c6573;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Award Highlight */
+.roadrace-award {
+    margin-top: auto;
+    padding-top: 14px;
+
+    color: #9a741b;
+    font-weight: bold;
+    line-height: 1.6;
+
+    border-top: 1px solid #e7ecf3;
+}
+
+/* =========================================
+   SPORTS PAGE CATEGORY CARD LINK
+   ========================================= */
+
+.roadrace-card-link {
+    display: inline-block;
+    margin-top: 10px;
+
+    color: #c9a227;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .roadrace-card-link {
+    color: #142b4a;
+}
+
+/* =========================================
+   ROAD RACE FOOTER
+   ========================================= */
+
+.roadrace-footer {
+    padding: 22px 6%;
+
+    background-color: #142b4a;
+    color: #ffffff;
+
+    text-align: center;
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    .roadrace-hero {
+        min-height: 260px;
+        padding: 50px 5%;
+    }
+
+    .roadrace-hero p {
+        font-size: 16px;
+    }
+
+    .roadrace-achievements {
+        padding: 40px 5%;
+    }
+
+    .roadrace-achievements h2 {
+        font-size: 27px;
+    }
+
+    .roadrace-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .roadrace-card-content {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+   CHESS PAGE
+   ========================================= */
+
+/* Chess Banner */
+.chess-hero {
+    min-height: 320px;
+    padding: 70px 6%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #ffffff;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 43, 74, 0.55),
+            rgba(20, 43, 74, 0.75)
+        ),
+        url("images/chess-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.chess-hero h1 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.chess-hero p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Achievements Section */
+.chess-achievements {
+    padding: 55px 6%;
+    background-color: #f5f7fb;
+}
+
+.chess-achievements h2 {
+    margin: 0 0 15px;
+    color: #142b4a;
+    text-align: center;
+    font-size: 32px;
+}
+
+.chess-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    color: #5c6573;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Achievement Card Grid */
+.chess-card-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 350px)
+    );
+
+    justify-content: center;
+    align-items: stretch;
+    gap: 28px;
+}
+
+/* Individual Chess Card */
+.chess-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+    border: 1px solid #e7ecf3;
+    border-radius: 18px;
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(20, 43, 74, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.chess-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 32px rgba(20, 43, 74, 0.18);
+}
+
+/* Card Image */
+.chess-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #dce4ed;
+}
+
+.chess-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Card Content */
+.chess-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* Achievement Tag */
+.chess-tag {
+    display: inline-block;
+    align-self: flex-start;
+
+    padding: 7px 12px;
+
+    background-color: #e9eff8;
+    color: #142b4a;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Card Heading */
+.chess-card-content h3 {
+    margin: 16px 0 12px;
+
+    color: #142b4a;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+/* Card Description */
+.chess-card-content p {
+    margin: 0 0 14px;
+
+    color: #5c6573;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Award Highlight */
+.chess-award {
+    margin-top: auto;
+    padding-top: 14px;
+
+    color: #9a741b;
+    font-weight: bold;
+    line-height: 1.6;
+
+    border-top: 1px solid #e7ecf3;
+}
+
+/* Footer */
+.chess-footer {
+    padding: 22px 6%;
+
+    background-color: #142b4a;
+    color: #ffffff;
+
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+
+    .chess-hero {
+        min-height: 260px;
+        padding: 50px 5%;
+    }
+
+    .chess-hero p {
+        font-size: 16px;
+    }
+
+    .chess-achievements {
+        padding: 40px 5%;
+    }
+
+    .chess-achievements h2 {
+        font-size: 27px;
+    }
+
+    .chess-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .chess-card-content {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+   CHESS CATEGORY CARD LINK
+   ========================================= */
+
+.chess-card-link {
+    display: inline-block;
+    margin-top: 10px;
+
+    color: #c9a227;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .chess-card-link {
+    color: #142b4a;
+}
+
+/* =========================================
+   BADMINTON PAGE
+   ========================================= */
+
+/* Badminton Banner */
+.badminton-hero {
+    min-height: 320px;
+    padding: 70px 6%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #ffffff;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 43, 74, 0.55),
+            rgba(20, 43, 74, 0.75)
+        ),
+        url("images/badminton-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.badminton-hero h1 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.badminton-hero p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Achievements Section */
+.badminton-achievements {
+    padding: 55px 6%;
+    background-color: #f5f7fb;
+}
+
+.badminton-achievements h2 {
+    margin: 0 0 15px;
+    color: #142b4a;
+    text-align: center;
+    font-size: 32px;
+}
+
+.badminton-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    color: #5c6573;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Achievement Card Grid */
+.badminton-card-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 350px)
+    );
+    justify-content: center;
+    align-items: stretch;
+    gap: 28px;
+}
+
+/* Individual Achievement Card */
+.badminton-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+    border: 1px solid #e7ecf3;
+    border-radius: 18px;
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(20, 43, 74, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.badminton-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 32px rgba(20, 43, 74, 0.18);
+}
+
+/* Card Image */
+.badminton-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #dce4ed;
+}
+
+.badminton-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Card Content */
+.badminton-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* Achievement Tag */
+.badminton-tag {
+    display: inline-block;
+    align-self: flex-start;
+
+    padding: 7px 12px;
+
+    background-color: #e9eff8;
+    color: #142b4a;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Card Heading */
+.badminton-card-content h3 {
+    margin: 16px 0 12px;
+    color: #142b4a;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+/* Card Description */
+.badminton-card-content p {
+    margin: 0 0 14px;
+    color: #5c6573;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Award Highlight */
+.badminton-award {
+    margin-top: auto;
+    padding-top: 14px;
+
+    color: #9a741b;
+    font-weight: bold;
+    line-height: 1.6;
+
+    border-top: 1px solid #e7ecf3;
+}
+
+/* Footer */
+.badminton-footer {
+    padding: 22px 6%;
+    background-color: #142b4a;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+
+    .badminton-hero {
+        min-height: 260px;
+        padding: 50px 5%;
+    }
+
+    .badminton-hero p {
+        font-size: 16px;
+    }
+
+    .badminton-achievements {
+        padding: 40px 5%;
+    }
+
+    .badminton-achievements h2 {
+        font-size: 27px;
+    }
+
+    .badminton-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .badminton-card-content {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+   BADMINTON CATEGORY CARD LINK
+   ========================================= */
+
+.badminton-card-link {
+    display: inline-block;
+    margin-top: 10px;
+
+    color: #c9a227;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .badminton-card-link {
+    color: #142b4a;
+}
+
+/* =========================================
+   CARROM PAGE
+   ========================================= */
+
+/* Carrom Banner */
+.carrom-hero {
+    min-height: 320px;
+    padding: 70px 6%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #ffffff;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 43, 74, 0.55),
+            rgba(20, 43, 74, 0.75)
+        ),
+        url("images/carrom-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carrom-hero h1 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.carrom-hero p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Achievements Section */
+.carrom-achievements {
+    padding: 55px 6%;
+    background-color: #f5f7fb;
+}
+
+.carrom-achievements h2 {
+    margin: 0 0 15px;
+    color: #142b4a;
+    text-align: center;
+    font-size: 32px;
+}
+
+.carrom-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    color: #5c6573;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Achievement Card Grid */
+.carrom-card-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 350px)
+    );
+    justify-content: center;
+    align-items: stretch;
+    gap: 28px;
+}
+
+/* Individual Achievement Card */
+.carrom-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+    border: 1px solid #e7ecf3;
+    border-radius: 18px;
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(20, 43, 74, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.carrom-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 32px rgba(20, 43, 74, 0.18);
+}
+
+/* Card Image */
+.carrom-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #dce4ed;
+}
+
+.carrom-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Card Content */
+.carrom-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* Achievement Tag */
+.carrom-tag {
+    display: inline-block;
+    align-self: flex-start;
+
+    padding: 7px 12px;
+
+    background-color: #e9eff8;
+    color: #142b4a;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Card Heading */
+.carrom-card-content h3 {
+    margin: 16px 0 12px;
+    color: #142b4a;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+/* Card Description */
+.carrom-card-content p {
+    margin: 0 0 14px;
+    color: #5c6573;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Award Highlight */
+.carrom-award {
+    margin-top: auto;
+    padding-top: 14px;
+
+    color: #9a741b;
+    font-weight: bold;
+    line-height: 1.6;
+
+    border-top: 1px solid #e7ecf3;
+}
+
+/* Footer */
+.carrom-footer {
+    padding: 22px 6%;
+    background-color: #142b4a;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+
+    .carrom-hero {
+        min-height: 260px;
+        padding: 50px 5%;
+    }
+
+    .carrom-hero p {
+        font-size: 16px;
+    }
+
+    .carrom-achievements {
+        padding: 40px 5%;
+    }
+
+    .carrom-achievements h2 {
+        font-size: 27px;
+    }
+
+    .carrom-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .carrom-card-content {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+   CARROM CATEGORY CARD LINK
+   ========================================= */
+
+.carrom-card-link {
+    display: inline-block;
+    margin-top: 10px;
+
+    color: #c9a227;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .carrom-card-link {
+    color: #142b4a;
+}
+
+/* =========================================
+   TAEKWONDO PAGE
+   ========================================= */
+
+/* Taekwondo Banner */
+.taekwondo-hero {
+    min-height: 320px;
+    padding: 70px 6%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #ffffff;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 43, 74, 0.55),
+            rgba(20, 43, 74, 0.75)
+        ),
+        url("images/taekwondo-banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.taekwondo-hero h1 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.taekwondo-hero p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Achievements Section */
+.taekwondo-achievements {
+    padding: 55px 6%;
+    background-color: #f5f7fb;
+}
+
+.taekwondo-achievements h2 {
+    margin: 0 0 15px;
+    color: #142b4a;
+    text-align: center;
+    font-size: 32px;
+}
+
+.taekwondo-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    color: #5c6573;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Achievement Card Grid */
+.taekwondo-card-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 350px)
+    );
+    justify-content: center;
+    align-items: stretch;
+    gap: 28px;
+}
+
+/* Individual Achievement Card */
+.taekwondo-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+    border: 1px solid #e7ecf3;
+    border-radius: 18px;
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(20, 43, 74, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.taekwondo-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 32px rgba(20, 43, 74, 0.18);
+}
+
+/* Card Image */
+.taekwondo-card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #dce4ed;
+}
+
+.taekwondo-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Card Content */
+.taekwondo-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* Achievement Tag */
+.taekwondo-tag {
+    display: inline-block;
+    align-self: flex-start;
+
+    padding: 7px 12px;
+
+    background-color: #e9eff8;
+    color: #142b4a;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Card Heading */
+.taekwondo-card-content h3 {
+    margin: 16px 0 12px;
+    color: #142b4a;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+/* Card Description */
+.taekwondo-card-content p {
+    margin: 0 0 14px;
+    color: #5c6573;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Award Highlight */
+.taekwondo-award {
+    margin-top: auto;
+    padding-top: 14px;
+
+    color: #9a741b;
+    font-weight: bold;
+    line-height: 1.6;
+
+    border-top: 1px solid #e7ecf3;
+}
+
+/* Footer */
+.taekwondo-footer {
+    padding: 22px 6%;
+    background-color: #142b4a;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 650px) {
+
+    .taekwondo-hero {
+        min-height: 260px;
+        padding: 50px 5%;
+    }
+
+    .taekwondo-hero p {
+        font-size: 16px;
+    }
+
+    .taekwondo-achievements {
+        padding: 40px 5%;
+    }
+
+    .taekwondo-achievements h2 {
+        font-size: 27px;
+    }
+
+    .taekwondo-card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .taekwondo-card-content {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+   TAEKWONDO CATEGORY CARD LINK
+   ========================================= */
+
+.taekwondo-card-link {
+    display: inline-block;
+    margin-top: 10px;
+
+    color: #c9a227;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .taekwondo-card-link {
+    color: #142b4a;
+}
+
+/* ===== BASEBALL ACHIEVEMENTS PAGE ===== */
+
+.baseball-hero {
+    min-height: 320px;
+    padding: 70px 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image:
+        linear-gradient(rgba(20, 43, 74, 0.55), rgba(20, 43, 74, 0.75)),
+        url("images/baseball-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.baseball-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.baseball-hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+.baseball-achievements {
+    background: #f5f7fb;
+    padding: 55px 6%;
+    text-align: center;
+}
+
+.baseball-achievements h2 {
+    color: #142b4a;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.baseball-intro {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.baseball-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
+    justify-content: center;
+    align-items: stretch;
+    gap: 28px;
+}
+
+.baseball-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.baseball-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.baseball-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.baseball-card-content {
+    padding: 25px;
+}
+
+.baseball-tag {
+    display: inline-block;
+    background: #e8edf5;
+    color: #142b4a;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.baseball-card-content h3 {
+    color: #142b4a;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.baseball-card-content p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.baseball-award {
+    color: #9b7710;
+    font-weight: bold;
+    font-size: 1.05rem;
+    margin: 18px 0;
+}
+
+.baseball-card-content .baseball-footer {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+.baseball-card-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #c9a227;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .baseball-card-link {
+    color: #142b4a;
+}
+
+@media (max-width: 650px) {
+    .baseball-hero h1 {
+        font-size: 2rem;
+    }
+
+    .baseball-hero p {
+        font-size: 1rem;
+    }
+
+    .baseball-achievements {
+        padding: 40px 5%;
+    }
+}

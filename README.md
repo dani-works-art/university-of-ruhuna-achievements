@@ -1,1 +1,1 @@
-# university-of-ruhuna-achievements
+# university-of-ruhuna-engineering-faculty-achievements

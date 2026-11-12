@@ -1,4 +1,3 @@
-# university-of-ruhuna-engineering-faculty-achievements
 # UNIACHIEVE RUHUNA – Faculty of Engineering, University of Ruhuna
 
 ## About the Project

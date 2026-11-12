@@ -52,7 +52,7 @@ The project files are organised within a single repository, including:
 - Images folder – Images used throughout the website.
 - README.md – Project documentation.
 
-  ## Achievement Submission
+## Achievement Submission
 
 The website includes an achievement submission form that allows students and members of the university community to share information about achievements. Submitted information can be reviewed before being added to the website.
 
